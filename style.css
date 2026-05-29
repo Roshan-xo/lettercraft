@@ -117,7 +117,7 @@ body.light select{
     margin-bottom:25px;
 }
 .hero h1{
-    font-size:4rem;
+    font-size:clamp(2rem, 8vw, 4rem);
     max-width:900px;
     margin:auto;
     line-height:1.15;
@@ -216,7 +216,7 @@ select{
     border:none;
     border-radius:14px;
     background:rgba(255,255,255,.08);
-    color:white;
+    color:rgb(243, 224, 15);
     outline:none;
 }
 textarea{
