@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Generate professional leave letters, permission letters, sick leave letters, job applications, complaint letters and more instantly with LetterCraft.">
+
+    <meta name="keywords"
+          content="leave letter, permission letter, application letter, job application, letter generator">
+
+    <title>LetterCraft | AI Letter Generator</title>
+
+    <link rel="icon" href="assets/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-feather"></i>
+        LetterCraft
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Templates</a></li>
+        <li><a href="#">Generator</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+        <button id="themeToggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            Premium AI Powered Letter Generator
+        </span>
+
+        <h1>
+            Create Professional Letters
+            In Seconds
+        </h1>
+
+        <p>
+            Generate leave letters, permission letters,
+            job applications, complaint letters,
+            and more with a luxury writing experience.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="primary-btn">
+                Start Writing
+            </button>
+
+            <button class="secondary-btn">
+                Explore Templates
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+                type="text"
+                id="searchTemplate"
+                placeholder="Search templates..."
+        >
+
+    </div>
+
+</section>
+
+<!-- MAIN CONTENT -->
+
+<section class="generator-container">
+
+    <!-- FORM -->
+
+    <div class="glass-card">
+
+        <h2>
+            Generate Letter
+        </h2>
+
+        <select id="letterType">
+
+            <option>Leave Letter</option>
+
+            <option>Permission Letter</option>
+
+            <option>Sick Leave Letter</option>
+
+            <option>Job Application</option>
+
+            <option>Complaint Letter</option>
+
+            <option>Resignation Letter</option>
+
+        </select>
+
+        <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+        >
+
+        <input
+                type="text"
+                id="receiver"
+                placeholder="Recipient Name"
+        >
+
+        <input
+                type="text"
+                id="reason"
+                placeholder="Reason"
+        >
+
+        <input
+                type="date"
+                id="date"
+        >
+
+        <textarea
+                id="extraDetails"
+                rows="5"
+                placeholder="Additional Details..."
+        ></textarea>
+
+        <button
+                class="generate-btn"
+                onclick="generateLetter()"
+        >
+            Generate Letter
+        </button>
+
+    </div>
+
+    <!-- PREVIEW -->
+
+    <div class="glass-card">
+
+        <div class="preview-header">
+
+            <h2>
+                Live Preview
+            </h2>
+
+            <div class="preview-actions">
+
+                <button onclick="copyLetter()">
+                    <i class="fa-solid fa-copy"></i>
+                </button>
+
+                <button onclick="downloadPDF()">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="preview">
+
+            <h3>
+                Your generated letter will appear here.
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-bolt"></i>
+
+        <h3>
+            Instant Generation
+        </h3>
+
+        <p>
+            Create professional letters instantly.
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-mobile-screen"></i>
+
+        <h3>
+            Fully Responsive
+        </h3>
+
+        <p>
+            Works perfectly on mobile and desktop.
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-file-pdf"></i>
+
+        <h3>
+            PDF Export
+        </h3>
+
+        <p>
+            Download ready-to-use letters.
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h3>
+            Secure
+        </h3>
+
+        <p>
+            Fast and reliable experience.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>100+</h2>
+        <p>Templates</p>
+    </div>
+
+    <div class="stat">
+        <h2>50K+</h2>
+        <p>Letters Generated</p>
+    </div>
+
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>Available</p>
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Start Creating Premium Letters Today
+    </h2>
+
+    <p>
+        Professional writing experience with
+        modern luxury design.
+    </p>
+
+    <button class="primary-btn">
+        Get Started
+    </button>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h3>LetterCraft</h3>
+
+            <p>
+                Premium Letter Generator Platform.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <ul>
+                <li> Templates</li>
+                <li> Generator</li>
+                <li> Features</li>
+                <li> Contact</li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Follow Us</h4>
+
+            <div class="socials">
+
+    <a href="https://instagram.com/lettercraft.official" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="mailto:lettercraft.support@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+
+</div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 LetterCraft. All Rights Reserved.
+    </div>
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
